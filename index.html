@@ -1,11 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Calculator</title>
+    <title>Kalkulator BMI</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo-bmi-freepik.png">
+    <!-- CSS Untuk Desain -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS Untuk Font Poppins -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <!-- CSS Khusus Header -->
+    <link rel="stylesheet" href="css/header.css">
 </head>
+
 <body>
-    <h1>Hello EverOne !!!</h1>
+    <header>
+        <section class="header">
+            <!-- <h1>Kalkulator BMI</h1> -->
+            <a href="#default" class="logo">
+                Kalkulator BMI</a>
+            <!-- <div class="header-right">
+                <a class="active" href="#home">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div> -->
+        </section>
+    </header>
+    <main>
+        <!-- Section Header -->
+        <!-- Section Form -->
+        <section class="content">
+            <div>
+                <header>
+                    <h1>Kalkulator BMI</h1>
+                </header>
+                <article>
+                    <p>Berat badan ideal adalah impian semua orang, Tidak hanya memiliki bentuk tubuh yang menunjang
+                        penampilan,
+                        berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? <br>Yuk,
+                        Hitung
+                        sekarang
+                        di
+                        Kalkulator BMI.</p>
+                    <p>Berat badan ideal adalah impian semua orang. Yuk, hitung sekarang!</p>
+                </article>
+            </div>
+
+            <form>
+                <div class="color-section">
+                    <header>
+                        <h3>
+                            Masukkan Data Kamu Ya !!!
+                        </h3>
+                    </header>
+                    <fieldset>
+                        <legend for="gender">Pilih Jenis Kelamin:</legend>
+                        <label for="male">Pria</label>
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="female">Wanita</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                    </fieldset>
+                    <br>
+                    <fieldset class="form-group">
+                        <legend>Usia & Ukuran Badan :</legend>
+                        <label for="berat-badan">Berat Badan (kg):</label>
+                        <input type="number" id="berat-badan" placeholder="Masukkan berat badanmu disini(kg)">
+                        <br>
+                        <label for="usia">Usia (tahun):</label>
+                        <input type="number" id="usia" placeholder="Masukkan Usiamu disini (tahun)">
+                        <br>
+                        <label for="tinggi-badan">Tinggi Badan (cm):</label>
+                        <input type="number" id="tinggi-badan" placeholder="Masukkan  tinggi badanmu disini (cm)">
+                        <br>
+                    </fieldset>
+                    <button type="button" onclick="hitungBMI()">Hitung BMI</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+
+            <div>
+                <h2>Keunggulan Fitur</h2>
+                <article>
+                    <ul class="li-numer">
+                        <li>Menghitung Berat Badan</li>
+                        <li>Menentukan berat badan ideal atau tidak</li>
+                        <li>Mempersiapkan Program Penurunan Berat Badan</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section Result -->
+        <Section class="content">
+            <header>
+                <h1>Hasil</h1>
+            </header>
+
+            <!-- Hasil Kalkulasi Kotak -->
+            <div class="color-section text-center">
+                <h4 id="message"></h4>
+                <h2 id="ResultBMI"></h2>
+                <p id="message1"></p>
+                <button>Download Hasil BMI</button>
+
+            </div>
+            <!-- Info Hasil Kalkulasi -->
+            <article>
+                <p>Hasil BMI Anda Adalah :</p>
+                <p id="info"></p>
+                <!-- <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button>Registrasi Online Ahli Gizi</button> -->
+                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan risiko penyakit
+                    seseorang. Anda perlu
+                    konsultasi lebih lanjut mengenai risiko dan kekhawatiran Anda terkait dengan berat badan Anda.
+                </p>
+            </article>
+            <div class="color-section text-center">
+                <p>Beberapa penyakit yang berasal dari kegemukan:</p>
+                <ul class="clean-li">
+                    <li>Diabetes</li>
+                    <li>Hipertensi</li>
+                    <li>Sakit Jantung</li>
+                    <li>Osteoarthritis</li>
+                </ul>
+                <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button>Registrasi Online Ahli Gizi</button>
+            </div>
+            <div class="text-center">
+                <h2>Download di</h2>
+                <img src="/assets/play.png" alt="playstore" width="200px">
+                <img src="/assets/app-store.png" alt="app-store" width="200px">
+            </div>
+        </Section>
+    </main>
+    <footer>
+        <p>Made With &#10084;&#65039; By Irfan</p>
+    </footer>
+    <script src="/js/script.js"></script>
 </body>
+
 </html>
